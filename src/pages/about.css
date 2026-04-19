@@ -1,0 +1,61 @@
+.containerOfAbout{
+    display: flex;
+    /* height: 100vh; */
+}
+.textOfAbout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    color: #ADA89F;
+}
+.textOfSponsor{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    color: #ADA89F;
+}
+.sponsorBtn{
+    display: flex;
+    width: fit-content;
+    padding: 15px;
+    outline: none;
+    border: #ADA89F 1px solid;
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+.sponsorImg{
+    margin-right: 10px;
+}
+.submitHeader,.sponsorHeader{
+    margin-top: 70px;
+}
+.textOfSubmit{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    color: #ADA89F;
+}
+.submitBtn{
+    display: flex;
+    width: fit-content;
+    padding: 15px;
+    outline: none;
+    border: #ADA89F 1px solid;
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+.submitImg{
+    margin-left: 10px;
+}

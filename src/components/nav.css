@@ -1,0 +1,39 @@
+
+.App-header{
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 30px;
+    margin:  auto;
+    position: relative;
+    /* border-bottom: 1px solid #E50914; */
+    /* border-height: 5px; */
+}
+.nav::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background-color: #606060;
+    bottom: 0   ;
+    left: 15%;  
+    /* margin: auto; */
+}
+.contactBtn{
+    background-color: #E50914;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.nav .userChoice{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}

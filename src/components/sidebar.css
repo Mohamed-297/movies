@@ -1,0 +1,257 @@
+.sidebar{
+    width:25%;
+    height: 1076px;
+    border: #ADA89F solid 1px;
+    padding: 30px;
+    position: fixed;
+
+}
+.hideSideBar{
+    width:25%;
+    height: 1076px;
+    border: #ADA89F solid 1px;
+    padding: 30px;
+    position: fixed;
+    display: none;
+}
+.exit{
+    color: red;
+    font-size: 20px;
+    /* background-color: white; */
+    width: fit-content;
+    position: absolute;
+    right:  10px;
+    top: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.hamburger{
+    color: #817B6F;
+    display: flex;
+    flex-direction: column;
+    width: 25px;
+    z-index: 2;
+    padding:30px 0 0 30px;
+    cursor: pointer;
+}
+.hideHamburger{
+    display: none;    
+}
+.hamburger span{
+    height: 1px;
+    width: 100%;
+    background: #817B6F;
+}
+.hamburger span:not(span:nth-child(3)){
+    margin-bottom: 10px;
+}
+.sidebarLogo{
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+}
+.sidebarTitle{
+    padding: 0px 0 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.sidebarTitleText{
+    color: #FAF9F7;
+    margin: 0;
+    font-size: 35px;
+}
+.sidebarTitleText span{
+    color: #FF4800;
+}
+.searchBar{
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.searchLogo{
+    width: 35px;
+    margin-right: 15px;
+}
+.searchInp{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #FAF9F7;
+    font-size: 30px;
+}
+.sidebarLists{
+    list-style: none;
+    padding: 0;
+    color: #ADA89F;
+}
+.sidebarListItem{   
+    margin-bottom: 30px;
+}
+.activeSidebarListItem{
+    margin-bottom: 30px;
+
+}
+.sidebarListItem a{
+    display: flex;
+    align-items:center;
+    text-decoration: none;
+    color: #ADA89F;
+}
+.activeSidebarListItem a::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    top:0;
+    left:0;
+    border-radius: 10px;
+    background-color: #FF4800;
+}
+.activeSidebarListItem a{
+    display: flex;
+    position: relative;
+    align-items:center;
+    text-decoration: none;
+    color: white;
+    background-color: #817B6F;
+    border-radius: 5px;
+    padding: 5px;
+    width: 75%;
+}
+
+.sidebarListItem img{
+    width: 25px;
+    margin-right: 10px;
+}
+.activeSidebarListItem img{
+    width: 25px;
+    margin-right: 10px;
+    filter : brightness(0) invert(1);
+}
+.sidebarListItem span{
+    font-size: 20px;
+}
+.activeSidebarListItem span{
+    font-size: 20px;
+}
+.genres{
+    margin-top: 100px;
+    position: relative;
+}
+.genres::after{
+    position: absolute;
+    content: "";
+    right: 0px;
+    top: 50%;
+    width: 70%;
+    height: 1px;
+    background-color: #ADA89F;
+}
+.genresTitle{
+    color: #ADA89F;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.sidebarGenres{
+    list-style: none;
+    padding: 0px;
+    margin-top: 30px;
+}
+.genreList{
+    color: #ADA89F;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.activeGenreList::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    top:0;
+    left:0;
+    border-radius: 10px;
+    background-color: #FF4800;
+}
+.activeGenreList{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 25px;
+    background-color: #817B6F;
+    border-radius: 5px;
+    padding: 5px;
+    width: 75%;
+    cursor: pointer;
+}
+.copyRights{
+    color: #ADA89F;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+.copyRights span{
+    text-transform: uppercase;
+    color: #FAF9F7;
+}
+
+/* media screen */
+
+
+@media (max-width:1460px) {
+    .sidebarLogo{
+        width: 20px;
+        height: 22px;
+    }
+    .sidebarTitle {
+        /* padding: 0px 0 20px 10px; */
+        
+    }
+    .sidebarTitleText{
+        font-size: 25px;
+    }
+}
+@media (max-width:1024px) {
+    
+    .sidebar{
+        position: relative;
+    }
+    .sidebarLogo{
+        width: 20px;
+        height: 22px;
+    }
+    .sidebarTitle {
+        padding: 0px 0 20px 10px;
+        
+    }
+    .sidebarTitleText{
+        font-size: 25px;
+    }
+}
+@media (min-width:1024px) {
+    
+    .sidebar{
+        width: 15%;
+    }
+    .exit{
+        display: none;
+    }
+    
+}
+@media (max-width:960px){
+.sidebar{
+            width: 60%;
+        }
+
+}

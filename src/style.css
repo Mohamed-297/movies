@@ -1,0 +1,186 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1A1716;
+    font-family: 'Poppins', sans-serif;
+}
+.App{
+    display: flex;
+}
+.navMain{
+    display: flex;
+    width: 100vw;
+    color: white;   
+    flex-direction: column;
+    margin-left: 28%;
+}
+.main{
+    padding: 50px;
+}
+.loadingData{
+    /* font-size: 150px; */
+    font-size: 10vw;
+    text-align: center;
+}
+.loadingError{
+    font-size: 10vw;
+    text-align: center;
+    color: red;
+}
+.noData{
+ font-size: 10vw;
+    text-align: center;
+    color: red;
+    width: 100%;
+}
+.movieContainer.noMovies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movieContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.movieCard{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.movieImg{
+    width:100%
+}
+.movieHeading{
+    display: flex;
+    align-items:center;
+    margin: 20px 0;
+}
+.movieHeading img{
+    /* width: 50px; */
+    margin-right: 10px;
+}
+.trailerLink{
+    color: red;
+    text-decoration: none;
+    background-color:white ;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+.pagination{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    /* height: 100px; */
+    border-radius: 5px;
+    /* background-color: white; */
+}
+.pagination button{
+    padding: 15px;
+    border: #ADA89F solid 1px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pagination button:hover{
+    background-color: #ADA89F;
+}
+.pagination button.active{
+    background-color: #ADA89F;
+    
+}
+.movieHeading p{
+        font-size: 25px;
+    margin: 0 0 10px 0;
+}
+button.activeNext:hover{
+    background-color: transparent;
+}
+button.disabled{
+    background-color: transparent;
+    color: #ADA89F;
+    cursor: not-allowed;
+}
+button.disabled:hover{
+    background-color: transparent;
+
+}
+@media (max-width:1460px){
+    .movieContainer{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+}
+@media (min-width:1024px) {
+    .movieImg{
+        height: 400px; ;
+    }
+    
+    .navMain{
+        margin-left: 20%;
+    }
+
+        .pagination button{
+        padding: 12px;
+        }
+}
+@media (max-width:1024px){
+
+    .movieContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .navMain{
+        width: fit-content;
+        margin-left: 0;
+    }
+    .trailerLink{
+        width: 90%;
+    }
+    .pagination button{
+        padding: 12px;
+        border: #ADA89F solid 1px;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        font-size: 15px;
+        width: fit-content;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+}
+@media (max-width:960px){
+.App{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media (max-width:720px){
+    
+    .pagination button{
+        padding: 5px;
+        border: #ADA89F solid 1px;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        font-size: 15px;
+        width: fit-content;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .movieContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
