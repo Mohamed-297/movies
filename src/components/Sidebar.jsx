@@ -45,7 +45,16 @@ export default function Sidebar() {
       setFilteredMovies({...movies})
       // setIsActive("home")
     }
-    
+    // used to get the category movies filtered cause of genre filtering
+    if(list==="Movies"){
+      const catMovies=(movies?.data||[]).filter((catMovie)=>catMovie.category.includes("Movies"))
+      setFilteredMovies({...movies,data:catMovies})
+    }
+    // used to get the Tv Shows filtered cause of genre filtering
+    if(list==="TV Shows"){
+      const catTv=(movies?.data||[]).filter((catTv)=>catTv.category.includes("TvShows"))
+      setFilteredMovies({...movies,data:catTv})
+    }
   }
   useEffect(()=>{
     if(!movies)return;
@@ -58,13 +67,14 @@ export default function Sidebar() {
       setFilteredMovies({...movies,data:catTv})
     }
   
-  },[nav.pathname, movies, setFilteredMovies])
+  },[nav.pathname, movies,setFilteredMovies])
   // filtering by clicking the genre
   function handleGenreSearch(gen){
     if(!movies||loader)return;
 
     let catFilter=movies.data;
     if(nav.pathname==="/movies"){
+
         catFilter=catFilter.filter((catMovie)=>catMovie.category.includes("Movies"))
     }
     if(nav.pathname==="/tv-shows"){

@@ -12,10 +12,10 @@ export const moviesContext =createContext();
 function App() {
   const[loader,setLoader]=useState(true);
   const [movies, setMovies] = useState({ data: [] })
-const [filteredMovies, setFilteredMovies] = useState({ data: [] })
+  const [filteredMovies, setFilteredMovies] = useState({ data: [] })
   const [isActiveGenre,setIsActiveGenre]=useState("")
   const [userChoice,setUserChoice]=useState("")
-  const[error,setError]=useState(null);
+  const [error,setError]=useState(null);
   const categories=["Movies","TvShows"];
   const genres=["Action","Comedy","Drama","Thriller","Science-Fiction","Fantasy","Horror"]
   const [toggleSideBar,setToggleSideBar]=useState(false)

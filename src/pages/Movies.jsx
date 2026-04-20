@@ -11,7 +11,7 @@ return (
     <div className='movieHeading'>
         <p>Movies</p>
     </div>
-    <div className={movies?`movieContainer`:`movieContainer noMovies`}>
+    <div className={filteredMovies.data.length>0?`movieContainer`:`movieContainer noMovies`}>
     {
     movies?         
     (filteredMovies?.data||movies?.data).map((movie)=>{
@@ -27,6 +27,11 @@ return (
     }): loader? "": <h2 className='noData'>No movies found</h2>
     }
 
+    {
+        !loader&&(filteredMovies?.data.length)===0&&(
+            (<h2 className='noData'>No Movies in this genre</h2>)
+        )
+    }
     </div>
     {
     movies&&(
@@ -38,7 +43,7 @@ return (
             >prev
             </button> 
             {
-                movies.links.filter((link)=>
+                movies?.links?.filter((link)=>
                     // remove the next and previous buttons from the pagination links 
                     link.label!=="&laquo; Previous" && 
                     link.label!=="Next &raquo;"

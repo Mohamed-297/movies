@@ -12,7 +12,7 @@ return (
         <img src={moviesLogo} alt='movies'/>
         <h2>Movies</h2>
     </div>
-    <div className={movies?`movieContainer`:`movieContainer noMovies`}>
+    <div className={filteredMovies.data.length>0?`movieContainer`:`movieContainer noMovies`}>
     {
     movies?         
     (filteredMovies?.data||movies?.data||[]).map((movie)=>{

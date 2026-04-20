@@ -59,3 +59,29 @@
 .submitImg{
     margin-left: 10px;
 }
+@media (max-width :1460px){
+    .moviesPoster{
+        width: 40%;
+    }
+    .textOfAbout{
+        width: 70%;
+    }
+    .textOfSubmit{
+        width: 70%;
+    }
+}
+@media (max-width :1024px){
+    .containerOfAbout{
+        flex-direction: column;
+    }
+    .textOfAbout{
+        width: 100%;
+    }
+    .textOfSubmit{
+        width: 80%;
+    }
+    .moviesPoster{
+        width: 80%;
+        margin: auto;
+    }
+}

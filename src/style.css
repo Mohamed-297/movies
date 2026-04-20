@@ -18,6 +18,12 @@ body{
 .main{
     padding: 50px;
 }
+.error-message{
+    font-size: 2rem;
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
 .loadingData{
     /* font-size: 150px; */
     font-size: 10vw;
