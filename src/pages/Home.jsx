@@ -15,7 +15,7 @@ return (
     <div className={movies?`movieContainer`:`movieContainer noMovies`}>
     {
     movies?         
-    (filteredMovies?.data||movies?.data).map((movie)=>{
+    (filteredMovies?.data||movies?.data||[]).map((movie)=>{
     return(
         <div className='movieCard' key={movie.id}>
             <div className='movieTitleImgContainer'>

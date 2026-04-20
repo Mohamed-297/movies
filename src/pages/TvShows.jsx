@@ -10,7 +10,7 @@ export default function TvShows() {
         <div className={movies?`movieContainer`:`movieContainer noMovies`}>
     {
     movies?         
-    filteredMovies?.data.map((movie)=>{
+    filteredMovies?.data?.map((movie)=>{
     return(
         <div className='movieCard' key={movie.id}>
             <div className='movieTitleImgContainer'>
