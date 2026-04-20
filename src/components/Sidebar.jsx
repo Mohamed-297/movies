@@ -6,7 +6,7 @@ import img1 from "../assets/images/Vector (1).png"
 import img2 from "../assets/images/Group.png"
 import img3 from "../assets/images/Group (1).png"
 import img4 from "../assets/images/Group (2).png"
-import { data, Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { moviesContext } from '../App'
 export default function Sidebar() {
   const [searchValue,setSearchValue]=useState("")

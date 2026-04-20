@@ -1,9 +1,9 @@
 
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { moviesContext } from '../App'
 
 export default function TvShows() {
-  const {loader,setLoader,movies,setMovies,filteredMovies,setFilteredMovies}=useContext(moviesContext);
+  const {loader,movies,filteredMovies}=useContext(moviesContext);
   
   console.log(filteredMovies)
   return (

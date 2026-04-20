@@ -1,12 +1,8 @@
-import React, {  useContext, useEffect, useState } from 'react'
+import React, {  useContext } from 'react'
 import moviesLogo from "../assets/images/Group (1).png"
 import { moviesContext } from '../App';
 export default function Home() {
-const{error,setError,
-    setIsActiveGenre,loader,
-    setLoader,movies,
-    setMovies,filteredMovies,
-    setFilteredMovies,getMovies}=useContext(moviesContext)
+const{loader,movies,filteredMovies,getMovies}=useContext(moviesContext)
 
 return (
     <div>
