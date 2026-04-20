@@ -59,12 +59,14 @@ const [filteredMovies, setFilteredMovies] = useState({ data: [] })
     }
     useEffect(()=>{
         getMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
   return (
     <div className="App">
       <moviesContext.Provider value={{userChoice,setUserChoice
         ,isActiveGenre,setIsActiveGenre,
         loader,setLoader,
+        error,
         movies,setMovies,
         filteredMovies,setFilteredMovies,
         toggleSideBar,setToggleSideBar,

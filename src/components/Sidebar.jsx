@@ -11,7 +11,7 @@ import { moviesContext } from '../App'
 export default function Sidebar() {
   const [searchValue,setSearchValue]=useState("")
   const [isActive,setIsActive]=useState("")
-  const {toggleSideBar,setToggleSideBar,userChoice,setUserChoice,isActiveGenre,setIsActiveGenre,loader,movies,filteredMovies,setFilteredMovies}=useContext(moviesContext);  
+  const {toggleSideBar,setToggleSideBar,userChoice,setUserChoice,isActiveGenre,setIsActiveGenre,loader,movies,setFilteredMovies}=useContext(moviesContext);  
   const nav=useLocation()
   // search character by character about the movie name
   function handleSearch(e){  
@@ -58,7 +58,7 @@ export default function Sidebar() {
       setFilteredMovies({...movies,data:catTv})
     }
   
-  },[nav.pathname,movies])
+  },[nav.pathname, movies, setFilteredMovies])
   // filtering by clicking the genre
   function handleGenreSearch(gen){
     if(!movies||loader)return;
