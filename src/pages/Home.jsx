@@ -39,7 +39,7 @@ return (
             >prev
             </button> 
             {
-                movies.links.filter((link)=>
+                movies?.links?.filter((link)=>
                     // remove the next and previous buttons from the pagination links 
                     link.label!=="&laquo; Previous" && 
                     link.label!=="Next &raquo;"
