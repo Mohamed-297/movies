@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import About from "./pages/About.jsx";
 import Movies from "./pages/Movies.jsx";
 import TvShows from "./pages/TvShows.jsx";
-import { createContext, use, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import NotFound from "./pages/NotFound.jsx";
 export const moviesContext =createContext();
 function App() {
