@@ -66,6 +66,7 @@
     font-size: 35px;
 }
 .sidebarTitleText span{
+    font-size: 35px;
     color: #FF4800;
 }
 .searchBar{
@@ -241,9 +242,7 @@
     .sidebar{
         width: 15%;
     }
-    .exit{
-        display: none;
-    }
+    
     
     
 }

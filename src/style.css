@@ -146,7 +146,7 @@ button.disabled:hover{
         grid-template-columns: repeat(3, 1fr);
     }
     .navMain{
-        width: fit-content;
+        width: 100%;
         margin-left: 0;
     }
     .trailerLink{

@@ -1,0 +1,102 @@
+:root{
+    --border-input:1px solid #ADA89F;
+    --border-radius-input:10px;
+}
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    /* margin-top: ; */
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin: auto;
+    padding: 40px;
+    border: var(--border-input);    
+    border-radius: var(--border-radius-input);    
+}
+.fullName{
+    display: flex;
+    flex-direction: column;
+}
+.emailTitle{
+    margin-bottom: 60px;
+}
+.fullNameContainer{
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+    gap: 10px;
+}
+
+.fnameHolder,.lnameHolder{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.fnameHolder{
+    margin-right: 8%;
+}
+input{
+    caret-color: white;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    padding: 20px;
+    background-color: transparent;
+    border: var(--border-input);
+    border-radius: var(--border-radius-input);  
+}
+label{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+span{
+    margin-top: 10px;
+    color: #ADA89F;
+    font-size: 15px;
+}
+.inpErr{
+    color: red;
+    font-size: 15px;
+}
+#message{
+    height: 150px;
+    margin-bottom: 60px;
+    background-color: transparent;
+    border: var(--border-input);
+    border-radius: var(--border-radius-input);
+    caret-color: white;
+    font-size: 20px;
+    color: white;
+    
+}
+.btnSubmit{
+    width: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: var(--border-radius-input);
+    background-color: #FF4800;
+    color: #FAF9F7;
+    font-size: 20px;
+    cursor: pointer;
+    margin: auto;
+    
+}
+.inputError{
+    border: 1px solid red;
+}
+.inputSuccess{
+    border: 1px solid green;
+}
+@media (max-width: 960px){
+    .formContainer{
+        width: 80%;
+    }
+    input{
+        padding: 10px;
+    }
+}

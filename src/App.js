@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import About from "./pages/About.jsx";
 import Movies from "./pages/Movies.jsx";
 import TvShows from "./pages/TvShows.jsx";
-import { createContext, useEffect, useState } from "react";
+import { createContext, use, useEffect, useState } from "react";
 import NotFound from "./pages/NotFound.jsx";
 export const moviesContext =createContext();
 function App() {
@@ -18,7 +18,19 @@ function App() {
   const [error,setError]=useState(null);
   const categories=["Movies","TvShows"];
   const genres=["Action","Comedy","Drama","Thriller","Science-Fiction","Fantasy","Horror"]
-  const [toggleSideBar,setToggleSideBar]=useState(false)
+  const [toggleSideBar,setToggleSideBar]=useState(true)
+  const [screenWidth,setScreenWidth]=useState(window.innerWidth);
+
+  useEffect(()=>{
+    function handleResize(){
+      setScreenWidth(window.innerWidth)
+    }
+    window.addEventListener("resize",handleResize)
+    return()=>{
+      window.removeEventListener("resize",handleResize)
+    }
+  },[window.innerWidth])
+  console.log(screenWidth)
   async function getMovies(url="https://Jsonfakery.com/movies/paginated"){
     try{
         setIsActiveGenre("")
@@ -45,6 +57,7 @@ function App() {
         }
         setMovies(updatedData);
         setFilteredMovies(updatedData)
+
         
         console.log(filteredMovies) 
         console.log(updatedData)            
@@ -70,12 +83,16 @@ function App() {
         movies,setMovies,
         filteredMovies,setFilteredMovies,
         toggleSideBar,setToggleSideBar,
-        getMovies}}>
-      <div onClick={()=>setToggleSideBar(prevTog=>!prevTog)} className={toggleSideBar?`hideHamburger`: `hamburger`}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        getMovies,
+        screenWidth}}>
+          
+      { (screenWidth<=960&&toggleSideBar)&&
+          <div className="hamburger" onClick={()=>setToggleSideBar(prevTog=>!prevTog)} >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      }
         <Sidebar />
         <div className="navMain">
           <Nav />

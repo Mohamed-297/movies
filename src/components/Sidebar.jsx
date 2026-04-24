@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { use, useContext, useEffect, useState } from 'react'
 import "./sidebar.css"
 import sidebarLogo from "../assets/images/Group 1.png"
 import searchLogo from "../assets/images/Vector.png"
@@ -11,7 +11,10 @@ import { moviesContext } from '../App'
 export default function Sidebar() {
   const [searchValue,setSearchValue]=useState("")
   const [isActive,setIsActive]=useState("")
-  const {toggleSideBar,setToggleSideBar,userChoice,setUserChoice,isActiveGenre,setIsActiveGenre,loader,movies,setFilteredMovies}=useContext(moviesContext);  
+  const {toggleSideBar,setToggleSideBar,userChoice,setUserChoice,
+    isActiveGenre,setIsActiveGenre,
+    loader,movies,setFilteredMovies,
+    screenWidth}=useContext(moviesContext);  
   const nav=useLocation()
   // search character by character about the movie name
   function handleSearch(e){  
@@ -91,21 +94,27 @@ export default function Sidebar() {
       }    
     }
 
-  
-  
+
+// useEffect(()=>{
+
+// }
 console.log(userChoice)
 
   
   // arrays of all data needed
   let arrOfLists=["Home","About Us","Movies","TV Shows"]
   let arrOfImgs=[img1,img2,img3,img4]
-  let arrOfGenres=["Action","Comedy","Drama","Thriller","Science-Fiction","Fantasy","Horror"]
-   
+  let arrOfGenres=["Action","Comedy","Drama","Thriller","Science-Fiction","Fantasy","Horror"]   
+  // useEffect(()=>{
+  //   if(screenWidth>=960){
+  //     setToggleSideBar(prevTog=>false)
+  //   }
+  // },[screenWidth===960])
 return (
       
       
-    <div  className={toggleSideBar?`sidebar`:`hideSideBar`}>
-      <p onClick={()=>setToggleSideBar(prevTog=>!prevTog)} className='exit'>X</p>
+    <div className={screenWidth>=960?"sidebar":!toggleSideBar?`sidebar`:`hideSideBar`}>
+      { screenWidth>=960?"":!toggleSideBar? <p onClick={()=>setToggleSideBar(prevTog=>true)} className='exit'>X</p>:""}
       <div className="sidebarTitle">
         <img className='sidebarLogo' src={sidebarLogo} alt="sidebarLogo" />
         <h2 className='sidebarTitleText'>Daily<span>Hub</span></h2>
