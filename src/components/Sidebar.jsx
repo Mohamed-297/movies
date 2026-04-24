@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect, useState } from 'react'
+import React, {  useContext, useEffect, useState } from 'react'
 import "./sidebar.css"
 import sidebarLogo from "../assets/images/Group 1.png"
 import searchLogo from "../assets/images/Vector.png"
@@ -105,11 +105,8 @@ console.log(userChoice)
   let arrOfLists=["Home","About Us","Movies","TV Shows"]
   let arrOfImgs=[img1,img2,img3,img4]
   let arrOfGenres=["Action","Comedy","Drama","Thriller","Science-Fiction","Fantasy","Horror"]   
-  // useEffect(()=>{
-  //   if(screenWidth>=960){
-  //     setToggleSideBar(prevTog=>false)
-  //   }
-  // },[screenWidth===960])
+  
+
 return (
       
       

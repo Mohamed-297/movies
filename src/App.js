@@ -29,6 +29,8 @@ function App() {
     return()=>{
       window.removeEventListener("resize",handleResize)
     }
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[window.innerWidth])
   console.log(screenWidth)
   async function getMovies(url="https://Jsonfakery.com/movies/paginated"){
