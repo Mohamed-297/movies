@@ -1,0 +1,36 @@
+.btnSubmitContainer{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.btnSubmitLogin{
+    background-color: #FF4800;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center ;   
+    width: 100px;
+}
+.notRegistered{
+    background-color: #FF4800;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center ;   
+}
+.usernameTitle{
+    margin-bottom: 40px;
+}
+@media (max-width:620px){
+    .btnSubmitLogin,.notRegistered{
+        padding: 7px 4px;
+        /* width: 100px; */
+        font-size: 10px;
+    }
+}

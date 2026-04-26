@@ -56,10 +56,6 @@ function handleSubmit(e){
       message:""
     }))
 }
-//example@example.com
-
-
-
       
   return (
     <div className='contactContainer'>

@@ -8,6 +8,9 @@ import Movies from "./pages/Movies.jsx";
 import TvShows from "./pages/TvShows.jsx";
 import { createContext, useEffect, useState } from "react";
 import NotFound from "./pages/NotFound.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import Protected from "./pages/Protected.jsx";
 export const moviesContext =createContext();
 function App() {
   const[loader,setLoader]=useState(true);
@@ -20,7 +23,6 @@ function App() {
   const genres=["Action","Comedy","Drama","Thriller","Science-Fiction","Fantasy","Horror"]
   const [toggleSideBar,setToggleSideBar]=useState(true)
   const [screenWidth,setScreenWidth]=useState(window.innerWidth);
-
   useEffect(()=>{
     function handleResize(){
       setScreenWidth(window.innerWidth)
@@ -80,13 +82,9 @@ function App() {
     <div className="App">
       <moviesContext.Provider value={{userChoice,setUserChoice
         ,isActiveGenre,setIsActiveGenre,
-        loader,setLoader,
-        error,
-        movies,setMovies,
-        filteredMovies,setFilteredMovies,
-        toggleSideBar,setToggleSideBar,
-        getMovies,
-        screenWidth}}>
+        loader,setLoader,error,movies,setMovies,
+        filteredMovies,setFilteredMovies,toggleSideBar,setToggleSideBar,
+        getMovies,screenWidth}}>
           
       { (screenWidth<=960&&toggleSideBar)&&
           <div className="hamburger" onClick={()=>setToggleSideBar(prevTog=>!prevTog)} >
@@ -100,9 +98,15 @@ function App() {
           <Nav />
           <div className="main">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={
+                <Protected>
+                  <Home />
+                </Protected>
+                } />
               <Route path="/home" element={<Navigate to="/" />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/about-us" element={<About />} />
               <Route path="/movies" element={<Movies />} />
               <Route path="/tv-shows" element={<TvShows />} />

@@ -21,6 +21,7 @@
 .fullName{
     display: flex;
     flex-direction: column;
+    height: 190px;
 }
 .emailTitle{
     margin-bottom: 60px;
@@ -84,7 +85,10 @@ span{
     font-size: 20px;
     cursor: pointer;
     margin: auto;
-    
+}
+.btnContainer{
+    display: flex;
+    gap: 20px;
 }
 .inputError{
     border: 1px solid red;
